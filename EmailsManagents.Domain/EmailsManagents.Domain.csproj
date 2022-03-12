@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EmailManagement\Framework.csproj" />
+    <ProjectReference Include="..\EmailsManagements.Application.Contracts\EmailsManagements.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

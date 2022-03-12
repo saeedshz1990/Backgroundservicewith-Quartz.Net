@@ -1,0 +1,77 @@
+﻿@page
+@using WebApplication6.TagHelpers
+@addTagHelper *,WebApplication5.TagHelpers
+@model WebApplication6.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<form method="post">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label asp-for="Command.Email" class="control-label">Emails </label>
+            <input type="text" class="form-control" asp-for="Command.Email">
+            <span asp-validation-for="Command.Email" class="error"></span>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit" class="btn btn-info alert-primary`">Save</button> &nbsp;&nbsp;
+
+    </div>
+</form>
+@*<script>
+    var btn = document.getElementById('btn');
+    var statusDiv = document.getElementById('status1');
+    btn.addEventListener('click' , function () {
+        var elem = document.createElement('input');
+        elem.type = 'text';
+        elem.className = 'form-control';
+        statusDiv.append(elem);
+</script>*@
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="status1">
+
+</div>
+<button id="btn">click</button>
+<script>
+    var btn = document.getElementById('btn');
+    var statusDiv = document.getElementById('status1');
+    btn.addEventListener('click',
+        function() {
+            var elem = document.createElement('input');
+            statusDiv.append(elem);
+        });
+</script>
+</body>
+</html>
+@*<input-email mail-to="" placeholder="Enter email" aria-describedby="emailHelp"></input-email>
+*@
+@*<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var button = document.createElement('input');
+    button.type = 'button';
+    button.id = 'plus';
+    button.className = 'glyphicon glyphicon-plus-sign btn btn-info btn-lg';
+
+    button.onclick = function() {
+    var input = document.createElement('input');
+    input.type = 'text';
+    input.Classname = 'form-control';
+
+    };
+    var container = document.getElementById('container');
+    container.appendChild(button);
+    }, false);
+    </script>*@
